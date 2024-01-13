@@ -1,20 +1,27 @@
 package house
 
-type House struct {
-	Family    Fam.Family
-	Animals   Pets.Animals
-	Rooms     rooms.Rooms
-	Gadgets   gadgets.Gadgets
-	Furniture furniture.FurnitureSet
+import (
+	"HouseP/Structures/Animals"
+	"HouseP/Structures/Family"
+	"HouseP/Structures/Furnitures"
+	"HouseP/Structures/Gadgets"
+	"HouseP/Structures/Rooms"
+)
+
+type Dom struct {
+	Animals Animals.Pets
+	Family Family.Fam
+	Furnitures Furnitures.FurnitureSet
+	Gadgets Gadgets.Gadget
+	Rooms Rooms.Rooms
 }
 
-func AddHouse() House {
-	return House{
-
-		Family:    family.AddFamily(),
-		Pets:      pets.AddPet(),
-		Rooms:     rooms.AddRoom(),
-		Gadgets:   gadgets.AddGadget(),
-		Furniture: furniture.AddFurnitureSet(),
+func AddHouse() Dom {
+	return Dom{
+		Animals: Animals.AddPet(),
+		Family: Family.AddFamily(),
+		Furnitures: Furnitures.AddFurnitureSet(),
+		Gadgets: Gadgets.AddGadgets(),
+		Rooms: Rooms.AddRoom(),
 	}
 }

@@ -12,7 +12,7 @@ type Gadget struct {
 	Gadget []Gadgets
 }
 
-func AddFurnitureSet() Gadget {
+func AddGadgets() Gadget {
 	var furn []Gadgets
 	furn = append(furn, Gadgets{Type: "Smartphone", Age: 1, Colour: "Blue", Model: "Iphone", Price: "59867395829826 p"})
 	furn = append(furn, Gadgets{Type: "Computer", Age: 3, Colour: "White", Model: "HP", Price: "54000 p"})
